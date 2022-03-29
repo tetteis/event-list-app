@@ -3,6 +3,7 @@ import "./App.css";
 import Title from "./components/Title";
 import Modal from "./components/Modal";
 import EventList from "./components/EventList";
+import NewEventForm from "./components/NewEventForm";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -47,17 +48,11 @@ function App() {
       </div>
       {showModal && (
         <Modal handleClose={handleClose} isSalesModal={true}>
-          <h2>Terms and Conditions</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            eveniet laboriosam. Earum, sed alias eligendi quam repellat iure
-            provident aliquam iusto voluptate nostrum sequi voluptas facilis,
-            ipsam molestiae consequuntur velit.
-          </p>
+          <NewEventForm />
         </Modal>
       )}
       <div>
-        <button onClick={handleOpen}>show modal</button>
+        <button onClick={handleOpen}>Add New Event</button>
       </div>
     </div>
   );
